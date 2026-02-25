@@ -1,0 +1,31 @@
+[package]
+name = "ic42n"
+version = "0.1.0"
+description = "Epoch-based Solana game using Merkle proofs"
+edition = "2021"
+license = "MIT"
+authors = ["Leo Nine"]
+repository = "https://github.com/oridion/ic42n"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "ic42n"
+
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = {version = "0.32.1", features = ["init-if-needed"]}
+sha2 = { version = "0.10", default-features = false }
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
