@@ -5,7 +5,7 @@ description = "Epoch-based Solana game using Merkle proofs"
 edition = "2021"
 license = "MIT"
 authors = ["Leo Nine"]
-repository = "https://github.com/oridion/ic42n"
+repository = "https://github.com/ic42n"
 
 [lib]
 crate-type = ["cdylib", "lib"]
@@ -26,6 +26,7 @@ custom-panic = []
 [dependencies]
 anchor-lang = {version = "0.32.1", features = ["init-if-needed"]}
 sha2 = { version = "0.10", default-features = false }
+solana-program = "=2.3.0"
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
