@@ -1,0 +1,8 @@
+[package]
+name = "verifier-deps"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+solana-program = "=2.3.0"
