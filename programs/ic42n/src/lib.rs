@@ -1,9 +1,20 @@
 use anchor_lang::prelude::*;
+use solana_security_txt::security_txt;
 
 // -----------------------------------------------------------------------------
 // Program ID
 // -----------------------------------------------------------------------------
 declare_id!("ic429goRDdS7BXEDYr2nZeAYMxtT6FL3AsB3sneaSu7");
+
+security_txt! {
+    name: "ISeeFortune",
+    project_url: "https://iseefortune.com",
+    source_code: "https://github.com/IC42N/iseefortune-anchor",
+    contacts: "mailto:contact@iseefortune.com, https://twitter.com/IcFortune",
+    policy: "https://github.com/IC42N/iseefortune-anchor/blob/main/SECURITY.md",
+    preferred_languages: "en"
+}
+
 
 // -----------------------------------------------------------------------------
 // Modules
